@@ -19,7 +19,7 @@ repositories {
 }
 
 dependencies {
-     implementation 'com.github.nowfalsalahudeen:KdroidExt:0.0.1'
+     implementation 'com.github.nowfalsalahudeen:KdroidExt:0.0.2'
 }
 ```
 
