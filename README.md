@@ -649,7 +649,7 @@ If you are customizing it and feel that the customizations are generic and would
 
 > **Declaration of `JPrefHelper` object: (recommended at class level)**
 
-    SharedPreferencesHelper sph; 
+    JPrefHelper sph; 
     
 > **Instantiation of the `JPrefHelper` object: (recommended in `onCreate()` method)**
  
