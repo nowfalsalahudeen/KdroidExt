@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * Created by Viral Patel on 01-Feb-16.
  */
-public class JPrefHelper {
+public class KPrefHelper {
 
     private final SharedPreferences settings;
 
@@ -79,7 +79,7 @@ public class JPrefHelper {
     /**
      * Uses the default shared preferences
      */
-    public JPrefHelper(Context context) {
+    public KPrefHelper(Context context) {
         settings = PreferenceManager.getDefaultSharedPreferences(context);
     }
 
@@ -88,7 +88,7 @@ public class JPrefHelper {
      * @param context
      * @param preferenceFileName
      */
-    public JPrefHelper(Context context, String preferenceFileName) {
+    public KPrefHelper(Context context, String preferenceFileName) {
         this(context, preferenceFileName, 0);
     }
 
@@ -98,7 +98,7 @@ public class JPrefHelper {
      * @param preferenceFileName
      * @param mode
      */
-    public JPrefHelper(Context context, String preferenceFileName, int mode) {
+    public KPrefHelper(Context context, String preferenceFileName, int mode) {
         settings = context.getSharedPreferences(preferenceFileName, mode);
     }
     //endregion

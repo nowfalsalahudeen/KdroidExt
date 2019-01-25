@@ -3,23 +3,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
-//apply plugin: 'com.novoda.bintray-release'
-
-//Step II: Add the below publish details
-//publish {
-//
-//    def groupProjectID = 'com.nowfal.kdroidext'
-//    def artifactProjectID = 'kdroidext'
-//    def publishVersionID = '1.0.0'
-//
-//    userOrg = 'nowfalsalahudeen'
-//    repoName = 'KdroidExt'
-//    groupId = groupProjectID
-//    artifactId = artifactProjectID
-//    publishVersion = publishVersionID
-//    desc = 'Extensions for Kotlin Android. Use the power of Kotlin to make your code smaller and beautiful.'
-//    website = 'https://github.com/nowfalsalahudeen/KdroidExt'
-//}
 
 
 android {
@@ -28,8 +11,8 @@ android {
         applicationId "com.nowfal.kdroid"
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 5
-        versionName "1.0.0"
+        versionCode 6
+        versionName "1.0.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
