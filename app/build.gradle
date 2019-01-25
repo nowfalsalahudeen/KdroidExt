@@ -12,7 +12,7 @@ publish {
     def artifactProjectID = 'kdroidext'
     def publishVersionID = '1.0.0'
 
-    userOrg = 'nowfal'
+    userOrg = 'nowfalsalahudeen'
     repoName = 'KdroidExt'
     groupId = groupProjectID
     artifactId = artifactProjectID
