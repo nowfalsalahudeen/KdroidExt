@@ -19,6 +19,7 @@
 package com.nowfal.kdroidext.kex
 
 import android.accounts.AccountManager
+import android.annotation.TargetApi
 import android.app.*
 import android.app.admin.DevicePolicyManager
 import android.app.job.JobScheduler
@@ -139,6 +140,7 @@ inline val Context.inputMethodManager
     get() = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager?
 
 inline val Context.inputManager
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     get() = getSystemService(Context.INPUT_SERVICE) as InputManager?
 
 inline val Context.jobScheduler
@@ -163,6 +165,7 @@ inline val Context.mediaProjectionManager
     get() = getSystemService(Context.MEDIA_PROJECTION_SERVICE) as MediaProjectionManager?
 
 inline val Context.mediaRouter
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     get() = getSystemService(Context.MEDIA_ROUTER_SERVICE) as MediaRouter?
 
 inline val Context.mediaSessionManager
@@ -176,6 +179,7 @@ inline val Context.notificationManager
     get() = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager?
 
 inline val Context.nsdManager
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     get() = getSystemService(Context.NSD_SERVICE) as NsdManager?
 
 inline val Context.powerManager

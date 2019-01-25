@@ -18,9 +18,11 @@
 
 package com.nowfal.kdroidext.kex
 
+import android.annotation.TargetApi
 import android.app.Activity
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.annotation.IdRes
@@ -28,6 +30,7 @@ import androidx.annotation.IdRes
 @Deprecated("Use findViewById() instead", ReplaceWith("findViewById()"))
 inline fun <reified T : View> Activity.find(@IdRes id: Int): T = findViewById(id)
 
+@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
 inline fun <reified T : Any> Activity.startActivityForResult(requestCode: Int, options: Bundle? = null, action: String? = null) =
         startActivityForResult(IntentFor<T>(this).setAction(action), requestCode, options)
 
