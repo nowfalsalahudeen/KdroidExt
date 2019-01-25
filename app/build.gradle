@@ -3,23 +3,23 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.novoda.bintray-release'
 
 //Step II: Add the below publish details
-publish {
-
-    def groupProjectID = 'com.nowfal.kdroidext'
-    def artifactProjectID = 'kdroidext'
-    def publishVersionID = '1.0.0'
-
-    userOrg = 'nowfalsalahudeen'
-    repoName = 'KdroidExt'
-    groupId = groupProjectID
-    artifactId = artifactProjectID
-    publishVersion = publishVersionID
-    desc = 'Extensions for Kotlin Android. Use the power of Kotlin to make your code smaller and beautiful.'
-    website = 'https://github.com/nowfalsalahudeen/KdroidExt'
-}
+//publish {
+//
+//    def groupProjectID = 'com.nowfal.kdroidext'
+//    def artifactProjectID = 'kdroidext'
+//    def publishVersionID = '1.0.0'
+//
+//    userOrg = 'nowfalsalahudeen'
+//    repoName = 'KdroidExt'
+//    groupId = groupProjectID
+//    artifactId = artifactProjectID
+//    publishVersion = publishVersionID
+//    desc = 'Extensions for Kotlin Android. Use the power of Kotlin to make your code smaller and beautiful.'
+//    website = 'https://github.com/nowfalsalahudeen/KdroidExt'
+//}
 
 
 android {
