@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/action_bar_root"
-        tools:context=".MainActivity">
+        tools:context="com.nowfal.kdroid.MainActivity">
 
     <TextView
             android:layout_width="wrap_content"
