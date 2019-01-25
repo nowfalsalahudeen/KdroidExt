@@ -4,7 +4,7 @@ package com.nowfal.kdroidext.DateTimeUtils;
 import android.content.Context;
 import android.text.format.DateUtils;
 import android.util.Log;
-import in.nowfal.kdroidext.R;
+import com.nowfal.kdroidext.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
