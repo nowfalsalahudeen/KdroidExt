@@ -22,6 +22,10 @@ dependencies {
      implementation 'com.github.nowfalsalahudeen:KdroidExt:1.0.0'
 }
 ```
+OR
+```
+implementation 'com.nowfal.kdroidext:kdroidext:1.0.0'
+```
 
 Usage
 -----
