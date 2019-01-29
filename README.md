@@ -1,5 +1,5 @@
 # KdroidExt
-[ ![Download](https://api.bintray.com/packages/nowfalsalahudeen/KdroidExt/com.nowfal.kdroidext/images/download.svg) ](https://bintray.com/nowfalsalahudeen/KdroidExt/com.nowfal.kdroidext/_latestVersion)  [![](https://jitpack.io/v/nowfalsalahudeen/KdroidExt.svg)](https://jitpack.io/#nowfalsalahudeen/KdroidExt) [![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=16)
+[ ![Download](https://api.bintray.com/packages/nowfalsalahudeen/KdroidExt/com.nowfal.kdroidext/images/download.svg) ](https://bintray.com/nowfalsalahudeen/KdroidExt/com.nowfal.kdroidext/_latestVersion) [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-kdroidext-green.svg?style=flat )]( https://android-arsenal.com/details/1/7493 ) [![](https://jitpack.io/v/nowfalsalahudeen/KdroidExt.svg)](https://jitpack.io/#nowfalsalahudeen/KdroidExt) [![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=16)
 
 <img src="img/demo.png" width="160px">
 
