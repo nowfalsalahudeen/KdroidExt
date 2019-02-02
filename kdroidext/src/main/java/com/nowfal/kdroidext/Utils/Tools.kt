@@ -24,14 +24,18 @@ import androidx.core.content.ContextCompat
 import androidx.core.widget.NestedScrollView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.bumptech.glide.request.RequestOptions
+//import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+//import com.bumptech.glide.request.RequestOptions
 
 import java.text.SimpleDateFormat
 import java.util.Date
 
 import android.content.Context.WINDOW_SERVICE
-import com.bumptech.glide.signature.ObjectKey
+import com.bumptech.glide.Priority
+import com.bumptech.glide.load.Key
+import com.bumptech.glide.signature.StringSignature
+
+//import com.bumptech.glide.signature.ObjectKey
 
 
 val screenWidth: Int
@@ -126,14 +130,20 @@ fun setSystemBarTransparent(act: Activity) {
 
 fun setImageUrl(@DrawableRes drawable: Int, img: ImageView) {
     try {
-        val requestOptions = RequestOptions()
-            .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
-            .signature(ObjectKey(System.currentTimeMillis()))
-            .skipMemoryCache(true)
+//        val requestOptions = RequestOptions()
+//            .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
+//            .signature(ObjectKey(System.currentTimeMillis()))
+//            .skipMemoryCache(true)
+//            .priority(Priority.HIGH)
 
         Glide.with(img.context).load(drawable)
-            .apply(requestOptions)
-            .transition(DrawableTransitionOptions.withCrossFade())
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .signature(StringSignature(System.currentTimeMillis().toString()))
+            .skipMemoryCache(true)
+            .priority(Priority.HIGH)
+            .crossFade()
+//            .apply(requestOptions)
+//            .transition(DrawableTransitionOptions.withCrossFade())
             .into(img)
     } catch (e: Exception) {
     }
@@ -143,13 +153,19 @@ fun setImageUrl(@DrawableRes drawable: Int, img: ImageView) {
 
 fun setImageUrl(url: String?, img: ImageView) {
     try {
-        val requestOptions = RequestOptions()
-            .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
-            .skipMemoryCache(true)
+//        val requestOptions = RequestOptions()
+//            .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
+//            .skipMemoryCache(true)
+//            .priority(Priority.HIGH)
 
         Glide.with(img.context).load(url)
-            .apply(requestOptions)
-            .transition(DrawableTransitionOptions.withCrossFade())
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .signature(StringSignature(System.currentTimeMillis().toString()))
+            .skipMemoryCache(true)
+            .priority(Priority.HIGH)
+            .crossFade()
+//            .apply(requestOptions)
+//            .transition(DrawableTransitionOptions.withCrossFade())
             .into(img)
     } catch (e: Exception) {
     }

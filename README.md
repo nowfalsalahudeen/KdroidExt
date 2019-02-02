@@ -19,12 +19,12 @@ repositories {
 }
 
 dependencies {
-     implementation 'com.github.nowfalsalahudeen:KdroidExt:1.0.4'
+     implementation 'com.github.nowfalsalahudeen:KdroidExt:1.0.7'
 }
 ```
 OR  [Recommended]
 ```
-implementation 'com.nowfal.kdroidext:kdroidext:1.0.4'
+implementation 'com.nowfal.kdroidext:kdroidext:1.0.7'
 ```
 
 Usage
