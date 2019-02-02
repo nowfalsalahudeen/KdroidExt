@@ -913,6 +913,16 @@ int milliseconds = DateTimeUtils.timeToMillis("14:20"); // 860000
 
 ```setImageUrl(url: String, img: ImageView)```
 
+```rateAction(activity: Activity)```
+
+```shareText(subject: String, body: String, mContext: Context)```
+
+```copyToClipboard(context: Context, data: String)```
+
+```setSystemBarTransparent(act: Activity)```
+
+```setSystemBarColor(act: Activity, @ColorRes color: Int) ```
+
 for more functions visit 
 
 
