@@ -911,7 +911,11 @@ int milliseconds = DateTimeUtils.timeToMillis("14:20"); // 860000
 
 ### Set Image URI in ImageView with cache stratogy (GLIDE)
 
-```setImageUrl(url: String, img: ImageView)```
+```setImageUrl(url: String, img: ImageView)
+
+add "implementation 'com.github.bumptech.glide:glide:4.8.0'" in your project for working setImgeUrl function
+
+``` 
 
 ```rateAction(activity: Activity)```
 
