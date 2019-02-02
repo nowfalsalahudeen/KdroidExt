@@ -141,7 +141,7 @@ fun setImageUrl(@DrawableRes drawable: Int, img: ImageView) {
 }
 
 
-fun setImageUrl(url: String, img: ImageView) {
+fun setImageUrl(url: String?, img: ImageView) {
     try {
         val requestOptions = RequestOptions()
             .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
