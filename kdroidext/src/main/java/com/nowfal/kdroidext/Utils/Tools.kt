@@ -33,7 +33,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.signature.ObjectKey
 import com.nowfal.kdroidext.R
-
+import de.hdodenhof.circleimageview.CircleImageView
 
 
 val screenWidth: Int
@@ -133,13 +133,11 @@ fun setImageUrl(@DrawableRes drawable: Int, img: ImageView) {
             .signature(ObjectKey(System.currentTimeMillis()))
             .skipMemoryCache(true)
             .priority(Priority.HIGH)
-            .error(R.drawable.error_flat)
-            .placeholder(R.drawable.ic_hourglass)
-            .dontAnimate()
+//            .dontAnimate()
 
         Glide.with(img.context).load(drawable)
             .apply(requestOptions)
-            .transition(DrawableTransitionOptions.withCrossFade())
+//            .transition(DrawableTransitionOptions.withCrossFade())
             .into(img)
     } catch (e: Exception) {
     }
@@ -153,13 +151,27 @@ fun setImageUrl(url: String?, img: ImageView) {
             .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
             .skipMemoryCache(true)
             .priority(Priority.HIGH)
-            .error(R.drawable.error_flat)
-            .placeholder(R.drawable.ic_hourglass)
-            .dontAnimate()
 
         Glide.with(img.context).load(url)
             .apply(requestOptions)
             .transition(DrawableTransitionOptions.withCrossFade())
+            .into(img)
+    } catch (e: Exception) {
+    }
+
+}
+
+fun setImageUrl(url: String?, img: CircleImageView) {
+    try {
+        val requestOptions = RequestOptions()
+            .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
+            .skipMemoryCache(true)
+            .priority(Priority.HIGH)
+//            .dontAnimate()
+
+        Glide.with(img.context).load(url)
+            .apply(requestOptions)
+//            .transition(DrawableTransitionOptions.withCrossFade())
             .into(img)
     } catch (e: Exception) {
     }

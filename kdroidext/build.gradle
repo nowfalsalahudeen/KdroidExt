@@ -21,7 +21,7 @@ ext {
     siteUrl = 'https://github.com/nowfalsalahudeen/KdroidExt'
     gitUrl = 'https://github.com/nowfalsalahudeen/KdroidExt.git'
 
-    libraryVersion = '1.1.0'
+    libraryVersion = '1.1.4'
 
     developerId = 'nowfalsalahudeen'
     developerName = 'Nowfal Salahudeen'
@@ -40,8 +40,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 15
-        versionName "1.1.0"
+        versionCode 19
+        versionName "1.1.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -65,6 +65,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
 
 }
 

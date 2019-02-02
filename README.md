@@ -19,12 +19,12 @@ repositories {
 }
 
 dependencies {
-     implementation 'com.github.nowfalsalahudeen:KdroidExt:1.1.0'
+     implementation 'com.github.nowfalsalahudeen:KdroidExt:1.1.1'
 }
 ```
 OR  [Recommended]
 ```
-implementation 'com.nowfal.kdroidext:kdroidext:1.1.0'
+implementation 'com.nowfal.kdroidext:kdroidext:1.1.1'
 ```
 
 Usage
@@ -914,6 +914,7 @@ int milliseconds = DateTimeUtils.timeToMillis("14:20"); // 860000
 ```setImageUrl(url: String, img: ImageView)
 
 add "implementation 'com.github.bumptech.glide:glide:4.8.0'" in your project for working setImgeUrl function
+and if you want to use circleimageview ,add "implementation 'de.hdodenhof:circleimageview:3.0.0'" in your project
 
 ``` 
 
