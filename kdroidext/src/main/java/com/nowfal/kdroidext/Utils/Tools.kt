@@ -134,7 +134,8 @@ fun setImageUrl(@DrawableRes drawable: Int, img: ImageView) {
             .skipMemoryCache(true)
             .priority(Priority.HIGH)
             .error(R.drawable.error_flat)
-            .placeholder(R.drawable.loading_gif)
+            .placeholder(R.drawable.ic_hourglass)
+            .dontAnimate()
 
         Glide.with(img.context).load(drawable)
             .apply(requestOptions)
@@ -152,9 +153,11 @@ fun setImageUrl(url: String?, img: ImageView) {
             .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
             .skipMemoryCache(true)
             .priority(Priority.HIGH)
+            .error(R.drawable.error_flat)
+            .placeholder(R.drawable.ic_hourglass)
+            .dontAnimate()
 
         Glide.with(img.context).load(url)
-
             .apply(requestOptions)
             .transition(DrawableTransitionOptions.withCrossFade())
             .into(img)
