@@ -923,7 +923,7 @@ int milliseconds = DateTimeUtils.timeToMillis("14:20"); // 860000
 
 ```setSystemBarColor(act: Activity, @ColorRes color: Int) ```
 
-for more functions visit 
+for more functions visit https://github.com/nowfalsalahudeen/KdroidExt/blob/master/kdroidext/src/main/java/com/nowfal/kdroidext/Utils/Tools.kt
 
 
 
