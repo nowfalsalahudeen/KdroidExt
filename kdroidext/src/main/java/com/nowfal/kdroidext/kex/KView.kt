@@ -39,6 +39,14 @@ inline fun View.show() {
     visibility = VISIBLE
 }
 
+inline fun View.invisible() {
+    visibility = INVISIBLE
+}
+
+inline fun View.gone() {
+    visibility = GONE
+}
+
 
 inline fun View.setSize(width:Int, height:Int) {
     val params = layoutParams

@@ -21,7 +21,7 @@ ext {
     siteUrl = 'https://github.com/nowfalsalahudeen/KdroidExt'
     gitUrl = 'https://github.com/nowfalsalahudeen/KdroidExt.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.3'
 
     developerId = 'nowfalsalahudeen'
     developerName = 'Nowfal Salahudeen'
@@ -40,8 +40,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 7
-        versionName "1.0.2"
+        versionCode 8
+        versionName "1.0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -64,6 +64,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
 }
 
 

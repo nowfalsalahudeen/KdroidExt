@@ -909,6 +909,11 @@ String time = DateTimeUtils.millisToTime(2515); // It take millis as an argument
 int milliseconds = DateTimeUtils.timeToMillis("14:20"); // 860000
 ```
 
+### Set Image URI in ImageView with cache stratogy (GLIDE)
+
+```setImageUrl(url: String, img: ImageView)```
+
+for more functions visit 
 
 
 
