@@ -96,10 +96,10 @@ infix fun TextView.set(@StringRes id: Int) {
     setText(id)
 }
 
-infix fun TextView.set(text: String) {
+infix fun TextView.set(text: String?) {
     setText(text)
 }
 
-infix fun TextView.set(text: Spannable) {
+infix fun TextView.set(text: Spannable?) {
     setText(text)
 }
