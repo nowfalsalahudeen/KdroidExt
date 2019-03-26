@@ -933,6 +933,54 @@ and if you want to use circleimageview ,add "implementation 'de.hdodenhof:circle
 for more functions visit https://github.com/nowfalsalahudeen/KdroidExt/blob/master/kdroidext/src/main/java/com/nowfal/kdroidext/Utils/Tools.kt
 
 
+###Time and Date Humanizer
+`TimeUnit.YEAR`, `TimeUnit.MONTH`, `TimeUnit.WEEK`, `TimeUnit.DAY`, `TimeUnit.HOUR`, `TimeUnit.MINUTE`, `TimeUnit.SECOND`, `TimeUnit.MILLISECOND`
+
+```kotlin
+val units = listOf(DurationHumanizer.TimeUnit.HOUR, DurationHumanizer.TimeUnit.MINUTE)
+var options = DurationHumanizer.Options(units = units)
+println(humanizer.humanize(97320000, options)) // 27 hours, 2 minutes
+// You can also have your own custom units
+val customUnit = DurationHumanizer.TimeUnit("o", 5000)
+options = DurationHumanizer.Options(
+    units = listOf(customUnit),
+    language = "cl",
+    languages = mapOf("cl" to customLanguage)
+)
+println(humanizer.humanize(97320000, options)) // 19464 o-abc
+```
+
+**round**
+
+Boolean value. Use `true` to [round](https://en.wikipedia.org/wiki/Rounding#Round_half_up) the smallest unit displayed (can be combined with `largest` and `units`).
+
+```kotlin
+val options = DurationHumanizer.Options(units = listOf(DurationHumanizer.TimeUnit.HOUR), round = true)
+println(humanizer.humanize(97320000, options)) // 27 hours
+```
+
+**decimal**
+
+String to substitute for the decimal point in a decimal fraction.
+
+```kotlin
+val options = DurationHumanizer.Options(units = listOf(DurationHumanizer.TimeUnit.HOUR), round = false, decimal = ",")
+println(humanizer.humanize(97560000, options)) // 27,1 hours
+```
+
+**conjunction**
+
+String to include before the final unit. You can also set `serialComma` to `false` to eliminate the final comma.
+
+```kotlin
+var options = DurationHumanizer.Options(conjunction = " and ")
+println(humanizer.humanize(22141000, options)) // 6 hours, 9 minutes, and 1 second
+options = DurationHumanizer.Options(conjunction = " and ", serialComma = false)
+println(humanizer.humanize(22141000, options)) // 6 hours, 9 minutes and 1 second
+```
+
+Special Thanks to Mohammad Mirrajabi (mirrajabi) for his awsome effort . Iam just merge his code base into my library for some useful things
+
 
 ## License
 
