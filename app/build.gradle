@@ -12,7 +12,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 21
-        versionName "1.1.7"
+        versionName "1.1.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -32,6 +32,6 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation 'com.google.android.material:material:1.0.0'
-
+    implementation 'com.squareup:pollexor:2.0.4'
     implementation project(':kdroidext')
 }
