@@ -13,18 +13,7 @@ Download
 
 Download latest version with Gradle:
 ```groovy
-repositories {
-    jcenter()
-    maven { url 'https://jitpack.io' }
-}
-
-dependencies {
-     implementation 'com.github.nowfalsalahudeen:KdroidExt:1.1.6'
-}
-```
-OR  [Recommended]
-```
-implementation 'com.nowfal.kdroidext:kdroidext:1.1.6'
+implementation 'com.nowfal.kdroidext:kdroidext:1.1.9'
 ```
 
 Usage
