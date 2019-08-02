@@ -26,7 +26,7 @@ fun Uri.realPath(context: Context): Uri {
     val cursor = context.contentResolver.query(this, null, null, null, null)
 
     if (cursor == null) {
-        result = this.path
+        result = this.path!!
     } else {
         cursor.moveToFirst()
         val idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA)

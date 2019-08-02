@@ -210,7 +210,7 @@ fun copyToClipboard(context: Context, data: String) {
     val clipboard = context
         .getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
     val clip = ClipData.newPlainText("clipboard", data)
-    clipboard.primaryClip = clip
+    clipboard.setPrimaryClip(clip)
     Toast.makeText(context, "Text copied to clipboard", Toast.LENGTH_SHORT).show()
 }
 
