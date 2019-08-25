@@ -13,7 +13,7 @@ Download
 
 Download latest version with Gradle:
 ```groovy
-implementation 'com.nowfal.kdroidext:kdroidext:1.1.9'
+implementation 'com.nowfal.kdroidext:kdroidext:1.2.0'
 ```
 
 Usage
