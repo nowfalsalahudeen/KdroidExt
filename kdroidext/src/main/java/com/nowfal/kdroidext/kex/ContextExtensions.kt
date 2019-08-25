@@ -35,6 +35,11 @@ fun Context.drawable(@DrawableRes drw: Int): Drawable? {
     return ContextCompat.getDrawable(this, drw)
 }
 
+fun Context.drawable(name: String, packageName: String): Drawable? {
+    val drwId = resources.getIdentifier(name, "drawable", packageName)
+    return ContextCompat.getDrawable(this, drwId)
+}
+
 fun Context.dimen(@DimenRes dmn: Int): Float {
     return resources.getDimension(dmn)
 }

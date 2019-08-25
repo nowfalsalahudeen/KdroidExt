@@ -21,11 +21,11 @@ ext {
     siteUrl = 'https://github.com/nowfalsalahudeen/KdroidExt'
     gitUrl = 'https://github.com/nowfalsalahudeen/KdroidExt.git'
 
-    libraryVersion = '1.1.9'
+    libraryVersion = '1.2.0'
 
     developerId = 'nowfalsalahudeen'
     developerName = 'Nowfal Salahudeen'
-    developerEmail = 'me@nowfal.in'
+    developerEmail = 'kdroidext@nowfal.in'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
@@ -40,8 +40,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 21
-        versionName "1.1.9"
+        versionCode 120
+        versionName "1.2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 

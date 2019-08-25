@@ -355,13 +355,13 @@ infix fun ViewGroup.inflate(@LayoutRes lyt: Int) =
         LayoutInflater.from(context).inflate(lyt, this, false)!!
 
 fun ViewGroup.forEach(action: (View) -> Unit) {
-    for (i in 0..childCount) {
+    for (i in 0 until childCount) {
         action(getChildAt(i))
     }
 }
 
 fun ViewGroup.forEachIndexed(action: (View, Int) -> Unit) {
-    for (i in 0..childCount) {
+    for (i in 0 until childCount) {
         action(getChildAt(i), i)
     }
 }
@@ -369,3 +369,11 @@ fun ViewGroup.forEachIndexed(action: (View, Int) -> Unit) {
 fun ViewGroup.isEmpty() = childCount == 0
 
 fun ViewGroup.isNotEmpty() = !isEmpty()
+
+fun View.visible(visible: Boolean, goneIfInvisible: Boolean = false) {
+    visibility = if (visible) {
+        View.VISIBLE
+    } else {
+        if (goneIfInvisible) View.GONE else View.INVISIBLE
+    }
+}

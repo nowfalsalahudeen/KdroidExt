@@ -23,12 +23,12 @@ import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
-import androidx.core.app.ActivityCompat
-import android.view.View
-import android.view.WindowManager
 import androidx.annotation.*
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import android.view.View
+import android.view.WindowManager
 
 fun Fragment.color(@ColorRes clr: Int): Int {
     return context!!.color(clr)
@@ -114,15 +114,15 @@ fun Fragment.removeFragment(fragment: Fragment) {
 
 fun Fragment.removeFragmentByTag(tag: String) {
     val ft = requireFragmentManager().beginTransaction()
-    val fragment = requireFragmentManager().findFragmentByTag(tag)
-    ft.remove(fragment!!)
+    val fragment = requireFragmentManager().findFragmentByTag(tag) ?: return
+    ft.remove(fragment)
     ft.commitNow()
 }
 
 fun Fragment.removeFragmentById(id: Int) {
     val ft = requireFragmentManager().beginTransaction()
-    val fragment = requireFragmentManager().findFragmentById(id)
-    ft.remove(fragment!!)
+    val fragment = requireFragmentManager().findFragmentById(id) ?: return
+    ft.remove(fragment)
     ft.commitNow()
 }
 
@@ -184,15 +184,15 @@ fun FragmentActivity.removeFragment(fragment: Fragment) {
 
 fun FragmentActivity.removeFragmentByTag(tag: String) {
     val ft = supportFragmentManager.beginTransaction()
-    val fragment = supportFragmentManager.findFragmentByTag(tag)
-    ft.remove(fragment!!)
+    val fragment = supportFragmentManager.findFragmentByTag(tag) ?: return
+    ft.remove(fragment)
     ft.commitNow()
 }
 
 fun FragmentActivity.removeFragmentById(id: Int) {
     val ft = supportFragmentManager.beginTransaction()
-    val fragment = supportFragmentManager.findFragmentById(id)
-    ft.remove(fragment!!)
+    val fragment = supportFragmentManager.findFragmentById(id) ?: return
+    ft.remove(fragment)
     ft.commitNow()
 }
 
@@ -261,7 +261,7 @@ fun <T> Activity.startActivityFromFragmentWithResult(activityTo: Class<T>, fragm
 @RequiresApi(Build.VERSION_CODES.KITKAT)
 fun Activity.makeTranslucentStatusBar() {
     window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS,
-            WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+        WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
 }
 
 @RequiresApi(Build.VERSION_CODES.KITKAT)
@@ -276,7 +276,7 @@ fun Activity.makeNormalStatusBar(statusBarColor: Int = -1) {
 @RequiresApi(Build.VERSION_CODES.KITKAT)
 fun Activity.makeTranslucentNavigationBar() {
     window.setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION,
-            WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
+        WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
 }
 
 @RequiresApi(Build.VERSION_CODES.KITKAT)
@@ -295,7 +295,7 @@ fun Activity.lightStatusBar(statusBarColor: Int = -1) {
         View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 window.decorView.rootView.systemUiVisibility =
-                        View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR + View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR + View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
             } else {
                 window.decorView.rootView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
             }
@@ -310,7 +310,7 @@ fun Activity.lightNavigation(navigationBarColor: Int = -1) {
         0 -> window.decorView.rootView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
         View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR -> {
             window.decorView.rootView.systemUiVisibility =
-                    View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR + View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+                View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR + View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
         }
     }
     window.navigationBarColor = if (navigationBarColor == -1) Color.WHITE else navigationBarColor
