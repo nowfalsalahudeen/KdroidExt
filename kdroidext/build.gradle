@@ -21,7 +21,7 @@ ext {
     siteUrl = 'https://github.com/nowfalsalahudeen/KdroidExt'
     gitUrl = 'https://github.com/nowfalsalahudeen/KdroidExt.git'
 
-    libraryVersion = '1.2.0'
+    libraryVersion = '1.2.2'
 
     developerId = 'nowfalsalahudeen'
     developerName = 'Nowfal Salahudeen'
@@ -40,8 +40,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 120
-        versionName "1.2.0"
+        versionCode 122
+        versionName "1.2.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -63,13 +63,13 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     implementation 'com.google.android.material:material:1.0.0'
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'com.squareup:pollexor:2.0.4'
 

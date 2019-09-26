@@ -128,15 +128,11 @@ fun setSystemBarTransparent(act: Activity) {
 
 fun setImageUrl(@DrawableRes drawable: Int, img: ImageView) {
     try {
-        val requestOptions = RequestOptions()
-            .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
-            .signature(ObjectKey(System.currentTimeMillis()))
-            .skipMemoryCache(true)
-            .priority(Priority.HIGH)
-//            .dontAnimate()
 
         Glide.with(img.context).load(drawable)
-            .apply(requestOptions)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .priority(Priority.HIGH)
+            .skipMemoryCache(true)
 //            .transition(DrawableTransitionOptions.withCrossFade())
             .into(img)
     } catch (e: Exception) {
@@ -147,33 +143,28 @@ fun setImageUrl(@DrawableRes drawable: Int, img: ImageView) {
 
 fun setImageUrl(url: String?, img: ImageView) {
     try {
-        val requestOptions = RequestOptions()
-            .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
-            .skipMemoryCache(true)
-            .priority(Priority.HIGH)
-
         Glide.with(img.context).load(url)
-            .apply(requestOptions)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .priority(Priority.HIGH)
+            .skipMemoryCache(true)
             .transition(DrawableTransitionOptions.withCrossFade())
             .into(img)
     } catch (e: Exception) {
+        e.printStackTrace()
     }
 
 }
 
 fun setImageUrl(url: String?, img: CircleImageView) {
     try {
-        val requestOptions = RequestOptions()
-            .diskCacheStrategy(DiskCacheStrategy.ALL) // because file name is always same
-            .skipMemoryCache(true)
-            .priority(Priority.HIGH)
-//            .dontAnimate()
-
         Glide.with(img.context).load(url)
-            .apply(requestOptions)
+            .diskCacheStrategy(DiskCacheStrategy.ALL)
+            .priority(Priority.HIGH)
+            .skipMemoryCache(true)
 //            .transition(DrawableTransitionOptions.withCrossFade())
             .into(img)
     } catch (e: Exception) {
+        e.printStackTrace()
     }
 
 }

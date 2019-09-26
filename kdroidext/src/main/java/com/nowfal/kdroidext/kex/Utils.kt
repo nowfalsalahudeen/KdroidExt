@@ -24,6 +24,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import androidx.fragment.app.FragmentStatePagerAdapter
 
 internal class ListAdapter<out T> : BaseAdapter {
     @LayoutRes
@@ -292,7 +293,7 @@ internal class TypedRecyclerAdapter<T> : RecyclerView.Adapter<TypedRecyclerAdapt
     internal class TypedViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }
 
-internal class PagerAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm) {
+internal class PagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm,BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     var fragmentsList = ArrayList<Fragment>()
     var fragmentsArray: Array<Fragment>? = null
